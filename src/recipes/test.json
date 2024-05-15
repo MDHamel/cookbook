@@ -1,0 +1,39 @@
+[
+    {
+        "name":"Chocolate Chip Cookies",
+        "desc": "A classic buttery cookie with chocolate chips.",
+        "ingredients":  [
+            "1 Stick of Butter",
+            "265g of Granulated Sugar",
+            "20g Molasses",
+            "115g Flour",
+            "115g Bread Flour",
+            "5g Baking Soda",
+            "5g Salt",
+            "1 tsp Vanilla Extract",
+            "2 Egg (room temp is preferred)",
+            "6oz Chocolate Chips (half a bag)"
+        ],
+        "preptime": "1 hour 30 minutes",
+        "cooktime": "8 - 12 minutes",
+        "servings": "20 - 22 Cookies",
+        "steps": [
+            "Add butter to a small sauce pan and cook over a medium-low heat. Stir constantly while scrapping the bottom until it smells like butterscotch and particles become a golden brown.",
+            "Remove from heat and set butter aside to cool.",
+            "In a mixing bowl, beat sugar and molasses until there are no clumps.",
+            "In a separate bowl, combine flour, bread flour, baking soda, and salt.",
+            "After sugar and molasses are mixed, add the browned butter and vanilla mix until thoroughly combined.",
+            "Next, beat in one egg at a time, scrapping the sides before adding the next egg.",
+            "Beat mixture until light and fluffy",
+            "Slowly add in flour mixtures, 1/3 at a time. Before the last portion, add the chocolate chips. DO NOT OVER MIX.",
+            "Place dough in a container and let it cool for at least one hour. Preheat oven to 325°F for convection or 350°F for normal baking.",
+            "Roll out dough into about 1.5 inch balls (ping pong ball size) about one to two inches apart.",
+            "For convection, place one sheet above the other and cook for 8-10 minutes. For normal baking, bake one at a time for 10-12 minutes. The bottom should be golden brown and the top should have some 'cracking'",
+            "Cool and Enjoy!"
+        ],
+        "image":"/media/treats/ChocolateChipCookies.jpg",
+        "tags":["cookies", "dessert", "sweet"],
+        "notes": ["If you don't have parchment paper or silicon baking sheets, used greased aluminum foil in a pinch."]
+    }
+    
+]

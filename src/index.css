@@ -1,4 +1,4 @@
-@import url(colors.css);
+@import url(style.css);
 
 body {
   margin: 0;
@@ -7,10 +7,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: var(--background) !important;
 }

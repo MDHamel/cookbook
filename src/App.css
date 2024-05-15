@@ -1,4 +1,308 @@
 .App {
-  
+    padding: 0;
+    margin: 0;
+
+    font-family: "Baskerville", "Times New Roman", serif;
 }
 
+main {
+    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.backdrop {
+    height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    position: absolute;
+    z-index: -500;
+    top: 0;
+
+    object-fit: cover;
+
+}
+
+.bg-darker { min-height: 100vh;
+    background-color: #1115;
+}
+
+.heading {
+    position: absolute;
+    height: 100%;
+
+    margin: 0;
+    padding-left: 20px;
+
+    color: var(--background);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--serif);
+
+    cursor: default;
+    user-select: none;
+
+    font-weight: bolder;
+    font-size: var(--fs) !important;
+}
+
+.heading-left {
+    left: 0;
+
+    writing-mode: vertical-lr !important;
+    unicode-bidi: embed;
+
+}
+
+.heading-right {
+    right: 0;
+
+    transform: rotate(-180deg);
+
+    writing-mode: vertical-rl !important;
+    unicode-bidi: embed;
+}
+
+
+/* Menu Containers */
+.SectionItem {
+    position: absolute;
+
+    left: calc(var(--index)*4vw);
+    min-height: 100vh;
+    width: 84vw;
+
+    transition: transform .5s ease-in-out;
+}
+
+.SectionItem:not(:nth-child(1))::after {
+    content: "";
+    width: 1px;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border-right: var(--background) 1px solid;
+}
+
+.SectionItem#selected {
+    border: none;
+}
+
+.SectionItem#right {
+    transform: translateX(80vw);
+}
+
+.SectionContents {
+    opacity: 0;
+    z-index: 100;
+    visibility: collapse;
+
+    transition: opacity .5s ease-in-out, visibility 0s .5s;
+}
+
+#selected .SectionContents {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out, visibility 0s .1s;
+}
+
+.SectionTitle {
+    opacity: 1;
+    padding: 0;
+    left: 0;
+    right: 95.5%;
+    margin: 0;
+
+    transition: opacity .33s linear;
+
+    color: white;
+
+    position: absolute;
+    height: 100%;
+
+    cursor: pointer;
+    user-select: none;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Baskerville", "Times New Roman", serif;
+
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+
+#selected .SectionTitle {
+    opacity: 0;
+}
+
+.RecipeCard {
+    width: 14rem;
+
+    transition: scale .2s ease-out, box-shadow .2s ease-out, ;
+}
+
+.RecipeCard img{
+    
+}
+
+.RecipeCard:hover {
+    scale: 1.05;
+    z-index: 100;
+    box-shadow: 0 0 30px 0px var(--section-color);
+}
+
+.RecipeCard .btn {
+    color: white !important;
+    background-color: var(--section-color) !important;
+
+    transition: filter .25s ease-out;
+}
+
+.RecipeCard .btn:hover {
+    filter: brightness(.85);
+}
+
+.RecipeCard .btn:active {
+    filter: brightness(1.2);
+}
+
+
+
+/* Home */
+#home {
+    height: 100vh;
+    left: 0;
+}
+
+
+
+/* Recipe Window */
+
+
+.RecipeWindowBacking {
+    position: fixed;
+    z-index: 900;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #111a;
+    visibility: collapse;
+    opacity: 0;
+}
+
+.RecipeWindow {
+    position: fixed;
+
+    width: 80vw;
+    height: 90vh;
+
+    background-color: var(--background);
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    padding: 1vw;
+
+    visibility: collapse;
+    opacity: 0;
+}
+
+
+
+.RecipeWindow img {
+    object-fit: contain;
+    width: 25vh;
+    max-height: 25vh;
+}
+
+.RecipeWindow ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.RecipeWindow li {
+    flex: 0 1 auto;
+    word-wrap: break-word;
+    width: 90%;
+    line-height: 1.5rem;
+    margin: 5px ;
+}
+
+.RecipeHeading p{
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+/* .RecipeHeading p:not(:nth-last-of-type(1))::after{
+    content: "";
+    width: 1px;
+    border-right: var(--divider) 2px solid;
+    margin: 0 10px 0 20px;
+
+} */
+
+.closebutton{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+
+    cursor:pointer;
+
+    color: #fffa;
+    font-size: 2rem;
+
+    z-index: 10000;
+
+    opacity: 0;
+
+    transition: color .25s;
+}
+
+.closebutton:hover{
+    color: white;
+}
+
+
+#reveal *{
+    transition: opacity .33s ease-in !important;
+}
+
+#reveal .RecipeWindow{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#reveal .RecipeWindowBacking{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#reveal .closebutton{
+    visibility: visible;
+    opacity: 1;
+}

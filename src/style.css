@@ -1,0 +1,96 @@
+:root{
+    --background: #e2d5c4;
+    
+    --divider: #2d2a2e;
+
+    --spotlight: #ecd1f3;
+
+    --text: #22180b;
+    
+    --red: #d47670;
+    --orng: #e2926c;
+    --yelo: #eeb96a;
+    --blue: #aa98cf;
+    --purp: #c087be;
+
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: "Reddit Sans", sans-serif;
+    --fun: "Poetsen One", sans-serif;
+
+}
+
+.bg{
+    background-color: var(--background) !important;
+}
+
+.bg-red{
+    background-color: var(--red) !important;
+}
+
+.bg-orng{
+    background-color: var(--orng) !important;
+}
+
+.bg-yelo{
+    background-color: var(--yelo) !important;
+}
+
+.bg-blue{
+    background-color: var(--blue) !important;
+}
+
+.bg-purp{
+    background-color: var(--purp) !important;
+}
+
+
+.text{
+    color: var(--text) !important;
+}
+
+.text-invert{
+    color: #f5ebd7!important;
+}
+
+.text-red{
+    color: var(--red) !important;
+}
+
+.text-orng{
+    color: var(--orng) !important;
+}
+
+.text-yelo{
+    color: var(--yelo) !important;
+}
+
+.text-blue{
+    color: var(--blue) !important;
+}
+
+.text-purp{
+    color: var(--purp) !important;
+}
+
+
+/* fonts */
+
+.font-serif {
+    font-family: var(--serif) !important;
+}
+.font-sans{
+    font-family: var(--sans) !important;
+}
+
+.font-fun{
+    font-family: var(--fun) !important;
+}
+
+.text-stroke{
+    text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+}
+
+.text-stroke-white{
+    text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 1px white;
+
+}
