@@ -1,8 +1,6 @@
 .App {
     padding: 0;
     margin: 0;
-
-    font-family: "Baskerville", "Times New Roman", serif;
 }
 
 main {
@@ -24,7 +22,6 @@ main {
     top: 0;
 
     object-fit: cover;
-
 }
 
 .bg-darker { min-height: 100vh;
@@ -229,12 +226,10 @@ main {
     opacity: 0;
 }
 
-
-
 .RecipeWindow img {
     object-fit: contain;
-    width: 25vh;
-    max-height: 25vh;
+    width: 22.5vh;
+    max-height: 22.5vh;
 }
 
 .RecipeWindow ul {

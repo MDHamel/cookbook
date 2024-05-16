@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useSearchParams, Link, useNavigate } from 'react-router-dom';
+
 import './App.css';
 
 import landing_bg from "./assets/opening.jpg"
@@ -7,7 +9,6 @@ import sides_bg from "./assets/side-dish.jpg"
 import bread_bg from "./assets/bread.jpg"
 import treats_bg from "./assets/dessert.jpg"
 
-import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 
 import testjson from "./recipes/test.json"
 
@@ -17,11 +18,14 @@ function App() {
   const titles = ["home", "entrees", "sides", "treats", "misc"];
   const colors = ["red", "orng", "yelo", "blue", "purp"];
 
+  const [searchParams] = useSearchParams();
+  const json_id = searchParams.get('json_id');
+
   const contents = [<Home />, 
   <RecipeSection jsonid={0} title={titles[1]} title_fs={"17vh"} bg={entrees_bg} />, 
-  <RecipeSection jsonid={0} title={titles[2]} title_fs={"19vh"} bg={entrees_bg} />, 
-  <RecipeSection jsonid={0} title={titles[3]} title_fs={"19vh"} bg={entrees_bg} />, 
-  <RecipeSection jsonid={0} title={titles[4]} title_fs={"19vh"} bg={entrees_bg} />]
+  <RecipeSection jsonid={0} title={titles[2]} title_fs={"19vh"} bg={sides_bg} />, 
+  <RecipeSection jsonid={0} title={titles[3]} title_fs={"19vh"} bg={treats_bg} />, 
+  <RecipeSection jsonid={0} title={titles[4]} title_fs={"19vh"} bg={bread_bg} />]
 
   const [selectedId, setSelected] = useState(0);
 
@@ -46,7 +50,7 @@ function App() {
 
 function SectionTitle({ children }) {
   return (
-    <p className='lh-1 h-100 d-flex flex-column mt-5 pt-5 SectionTitle text-stroke-white text font-sans'>{children.split("").map((val) => { return (<span>{val}<br /></span>) })}</p>
+    <p className='lh-1 h-100 d-flex flex-column mt-5 pt-5 SectionTitle text-stroke text-invert font-sans'>{children.split("").map((val) => { return (<span>{val}<br /></span>) })}</p>
   )
 }
 
